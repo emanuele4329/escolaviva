@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: escola-viva
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@escolaviva.local
+      - key: ADMIN_PASSWORD
+        generateValue: true
